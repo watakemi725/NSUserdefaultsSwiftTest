@@ -51,12 +51,12 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         //現在保存されているstringArrayの要素数を表示
         textNumOfArray.text = String(stringArray.count)
         
-        
     }
     
     //配列に保存する
     @IBAction func save(){
         
+        //配列にtextfieldの文字列を保存
         stringArray.append(self.textfield.text)
         
         //配列をopenKeyで保存
@@ -68,10 +68,7 @@ class ViewController: UIViewController ,UITextFieldDelegate {
     }
     
     
-    
-    
-    
-    
+
     //中身を確認する
     @IBAction func up(){
         
@@ -97,11 +94,7 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         
     }
     
-    
-    
-    
-    
-    
+
     @IBAction func clear(){
         stringArray.removeAll()
         defaults.removeObjectForKey("openKey")
@@ -137,12 +130,6 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         textField.resignFirstResponder()
         
         return true
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
