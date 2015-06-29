@@ -11,18 +11,20 @@ import UIKit
 class ViewController: UIViewController ,UITextFieldDelegate {
     
     @IBOutlet var textfield : UITextField!
-    @IBOutlet var mylabel : UILabel!
+    @IBOutlet var myLabel : UILabel!
     @IBOutlet var textNumOfArray : UILabel!
     @IBOutlet var textAtNum : UILabel!
     
     
     
-    //絡の配列を用意する
+    //空の配列を用意する
     var stringArray : [String] = []
     
     //中身を確認するためのnum
     var num = 0
     
+    
+    //NSUserDefaultsを使うための宣言
     let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
@@ -30,6 +32,10 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         textfield.delegate = self
+        
+        
+        
+        
         
         //昔"openKey"という鍵で保存したかどうか確認
         if((defaults.objectForKey("openKey")) != nil){
@@ -47,6 +53,11 @@ class ViewController: UIViewController ,UITextFieldDelegate {
             }
             
         }
+        
+        
+        
+        
+        
         
         //現在保存されているstringArrayの要素数を表示
         textNumOfArray.text = String(stringArray.count)
@@ -73,7 +84,7 @@ class ViewController: UIViewController ,UITextFieldDelegate {
     @IBAction func up(){
         
         //stringArrayの中身があることを確認
-        if stringArray.isEmpty != true{
+        if !stringArray.isEmpty == true{
             
             //配列の要素数以上の数字になったらエラーをおこすので、越えたら0に戻す
             if num >= stringArray.count {
@@ -83,7 +94,7 @@ class ViewController: UIViewController ,UITextFieldDelegate {
             }
             
             //配列の中身を表示してあげる
-            mylabel.text = stringArray[num]
+            myLabel.text = stringArray[num]
             
             //配列の何番目にいるのかを表示してあげる
             textAtNum.text = String(num)
@@ -98,7 +109,7 @@ class ViewController: UIViewController ,UITextFieldDelegate {
     @IBAction func clear(){
         stringArray.removeAll()
         defaults.removeObjectForKey("openKey")
-        mylabel.text = ""
+        myLabel.text = ""
         textAtNum.text = ""
         textNumOfArray.text = ""
         

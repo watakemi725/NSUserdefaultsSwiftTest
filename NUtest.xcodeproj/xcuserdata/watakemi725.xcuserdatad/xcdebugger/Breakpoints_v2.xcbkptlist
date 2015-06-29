@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NUtest/ViewController.swift"
-            timestampString = "457190869.35258"
+            timestampString = "457278236.035018"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "up()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NUtest/ViewController.swift"
-            timestampString = "457190869.35258"
+            timestampString = "457278236.035018"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "up()"
             landmarkType = "5">
          </BreakpointContent>
