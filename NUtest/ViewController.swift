@@ -105,7 +105,7 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         
     }
     
-
+    //保存している内容をすべて消す
     @IBAction func clear(){
         stringArray.removeAll()
         defaults.removeObjectForKey("openKey")
